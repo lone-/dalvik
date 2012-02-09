@@ -6610,11 +6610,11 @@ dalvik_inst:
     EAS2(t1, rFP, t1)                   # t1<- &fp[B]
     LOAD64(a2, a3, t1)		# vBB.low / high
 
-    mul     v1,a3,a0                    #  v1= a3a0
+    mult.g  v1,a3,a0                    #  v1= a3a0
     multu   a2,a0
     mfhi    t1
     mflo    v0                          #  v0= a2a0
-    mul     t2,a2,a1                    #  t2= a2a1
+    mult.g  t2,a2,a1                    #  t2= a2a1
     addu    v1,v1,t1                    #  v1= a3a0 + hi(a2a0) 
     addu    v1,v1,t2                    #  v1= v1   + a2a1;
 

@@ -37,7 +37,7 @@
  * seems appropriate, but we don't have that on the device.  Some systems
  * have getpagesize(2), though the linux man page has some odd cautions.
  */
-#define DEFAULT_PAGE_SIZE   4096
+#define DEFAULT_PAGE_SIZE   (16*1024) //4096
 
 
 /*

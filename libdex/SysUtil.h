@@ -34,7 +34,7 @@
 #ifdef PAGE_SHIFT
 #define SYSTEM_PAGE_SIZE        (1<<PAGE_SHIFT)
 #else
-#define SYSTEM_PAGE_SIZE        4096
+#define SYSTEM_PAGE_SIZE        (1<<14) /* 16K */
 #endif
 
 /*
